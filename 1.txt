@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+int main(){
+    system("chcp 65001");
+    float a, b;
+    char c;
+    cout << "Введите первое число:\n" << endl;
+    cin >> a;
+    cout << "Введите второе число:\n" << endl;
+    cin >> b;
+    cout << "Введите символ действия:\n" << endl;
+    cin >> c;
+    switch(c){
+        case '+':
+            cout << a+b << endl;
+            break;
+        case '-':
+            cout << a-b << endl;
+            break;
+        case '*':
+            cout << a*b << endl;
+            break;
+        case '/':
+            if(b==0)
+                cout << "Неверная опперация" << endl;
+            else
+                cout << a/b << endl;
+            break;
+        default:
+            cout << "Невозможно выполнить" << endl;
+            break;
+    }
+    return 0;
